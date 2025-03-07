@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#chat-container {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+#chat-header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#chat-messages {
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.monika {
+    background: #e0f7fa;
+    text-align: left;
+}
+
+.user {
+    background: #c8e6c9;
+    text-align: right;
+}
+
+#chat-input {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#message {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+#mode-toggle {
+    text-align: center;
+}

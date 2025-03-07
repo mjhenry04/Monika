@@ -1,0 +1,148 @@
+:root {
+    --primary-bg: #1e1e1e;
+    --bubble-monika: rgba(50, 50, 50, 0.85);
+    --bubble-user: rgba(0, 122, 255, 0.85);
+    --text-color: #ffffff;
+    --input-bg: rgba(40, 40, 40, 0.9);
+    --send-btn: #007aff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.container {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-header {
+    padding: 10px;
+    background: var(--primary-bg);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: url('/static/monika_transparent.png') no-repeat center center;
+    background-size: contain;
+    min-height: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-message {
+    display: block;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.chat-message.monika {
+    background: var(--bubble-monika);
+    margin-right: auto;
+}
+
+.chat-message.user {
+    background: var(--bubble-user);
+    margin-left: auto;
+    text-align: right;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #888;
+    padding: 10px;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
+.mood-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+.mood-progress {
+    height: 100%;
+    background: var(--send-btn);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+form {
+    display: flex;
+    padding: 10px;
+    background: var(--primary-bg);
+    align-items: center;
+    flex-shrink: 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    outline: none;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--send-btn);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+#mode-toggle {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#mode-switch {
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: none;
+}
